@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --color-primary: #1B365D; /* deep-blue-900 - Executive trust and strategic depth */
+    --color-primary-foreground: #FFFFFF; /* white */
+    --color-secondary: #0176D3; /* blue-600 - Salesforce ecosystem alignment and innovation */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    --color-accent: #2E8B57; /* green-700 - Success metrics and positive outcomes */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Background System */
+    --color-background: #FAFBFC; /* gray-50 - Clean canvas for detailed content */
+    --color-foreground: #1A202C; /* gray-900 - Extended reading and professional clarity */
+    --color-surface: #F4F6F9; /* gray-100 - Subtle content separation and depth */
+    
+    /* UI Foundation */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #1A202C; /* gray-900 */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1A202C; /* gray-900 */
+    --color-muted: #F4F6F9; /* gray-100 */
+    --color-muted-foreground: #4A5568; /* gray-600 - Supporting information and hierarchy */
+    
+    /* Interactive Elements */
+    --color-border: #E2E8F0; /* gray-300 */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #0176D3; /* blue-600 */
+    
+    /* Status Colors */
+    --color-success: #38A169; /* green-600 - Achievement highlights and positive metrics */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #D69E2E; /* yellow-600 - Attention without alarm for urgency */
+    --color-warning-foreground: #1A202C; /* gray-900 */
+    --color-error: #E53E3E; /* red-600 - Clear problem indication with solution focus */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #E53E3E; /* red-600 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Conversion Elements */
+    --color-cta: #FF6B35; /* orange-500 - Energetic orange driving action */
+    --color-cta-foreground: #FFFFFF; /* white */
+    --color-trust: #4CAF50; /* green-500 - Trust builder */
+    --color-trust-foreground: #FFFFFF; /* white */
+    
+    /* Typography Scale */
+    --font-family-brand: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-family-accent: 'Playfair Display', Georgia, serif;
+    
+    /* Spacing System */
+    --spacing-base: 1.5rem; /* 24px */
+    --spacing-grid: 0.5rem; /* 8px */
+    
+    /* Shadow System */
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-modal: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-elevation: 0 4px 20px rgba(0, 0, 0, 0.15);
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem; /* 4px */
+    --radius-default: 0.5rem; /* 8px */
+    --radius-lg: 0.75rem; /* 12px */
+    --radius-xl: 1rem; /* 16px */
+    
+    /* Animation Timing */
+    --transition-fast: 0.15s ease-out;
+    --transition-default: 0.3s ease-out;
+    --transition-slow: 0.4s ease-out;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: var(--font-family-brand);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-brand);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  
+  .font-accent {
+    font-family: var(--font-family-accent);
+  }
+  
+  /* Custom Animations */
+  @keyframes pulse-subtle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-pulse-subtle {
+    animation: pulse-subtle 2s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right 0.4s ease-out;
+  }
+  
+  /* Scroll Behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Focus Styles */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+}
