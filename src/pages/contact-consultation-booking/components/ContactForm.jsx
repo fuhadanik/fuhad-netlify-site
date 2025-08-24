@@ -54,7 +54,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-card rounded-xl shadow-card border border-border p-8">
+  <div className="bg-card rounded-xl shadow-card border border-border p-8">
       <div className="text-center mb-8">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full mb-4">
           <Icon name="MessageCircle" size={32} className="text-white" />
@@ -62,7 +62,18 @@ const ContactForm = () => {
         <h2 className="text-2xl font-bold text-foreground mb-2">Get In Touch</h2>
         <p className="text-muted-foreground">Share your project details and let's discuss how we can help transform your business</p>
       </div>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form 
+        name="contact-form" 
+        method="POST" 
+        data-netlify="true" 
+        netlify-honeypot="bot-field" 
+        onSubmit={handleSubmit} 
+        className="space-y-6"
+      >
+        {/* Netlify hidden input for form name */}
+        <input type="hidden" name="form-name" value="contact-form" />
+        {/* Netlify honeypot field */}
+        <input type="hidden" name="bot-field" />
         {/* Inquiry Type */}
         <div>
           <Select

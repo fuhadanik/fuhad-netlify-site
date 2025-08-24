@@ -160,7 +160,18 @@ const ConsultationWidget = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              name="homepage-consultation" 
+              method="POST" 
+              data-netlify="true" 
+              netlify-honeypot="bot-field" 
+              onSubmit={handleSubmit} 
+              className="space-y-6"
+            >
+              {/* Netlify hidden input for form name */}
+              <input type="hidden" name="form-name" value="homepage-consultation" />
+              {/* Netlify honeypot field */}
+              <input type="hidden" name="bot-field" />
               <div className="grid grid-cols-2 gap-4">
                 <Input
                   label="Full Name"
