@@ -192,7 +192,18 @@ const ConsultationSection = () => {
                 Schedule Your Consultation
               </h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                name="marketing-cloud-consultation" 
+                method="POST" 
+                data-netlify="true" 
+                netlify-honeypot="bot-field" 
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
+                {/* Netlify hidden input for form name */}
+                <input type="hidden" name="form-name" value="marketing-cloud-consultation" />
+                {/* Netlify honeypot field */}
+                <input type="hidden" name="bot-field" />
                 <div className="grid md:grid-cols-2 gap-4">
                   <Input
                     label="Full Name"
