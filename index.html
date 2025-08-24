@@ -15,6 +15,52 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div class="dhiwise-code" id="root"></div>
+
+  <!-- Hidden Netlify forms for detection -->
+  <form name="consultation-booking" data-netlify="true" method="POST" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="company" />
+    <input type="tel" name="phone" />
+    <input type="text" name="projectDetails" />
+    <input type="text" name="selectedDate" />
+    <input type="text" name="selectedTime" />
+    <input type="text" name="selectedType" />
+    <input type="text" name="selectedTimezone" />
+  </form>
+
+  <form name="contact-form" data-netlify="true" method="POST" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="company" />
+    <input type="tel" name="phone" />
+    <input type="text" name="inquiryType" />
+    <input type="text" name="message" />
+    <input type="text" name="budget" />
+    <input type="text" name="timeline" />
+  </form>
+
+  <form name="marketing-cloud-consultation" data-netlify="true" method="POST" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="company" />
+    <input type="text" name="consultationType" />
+    <input type="text" name="currentPlatform" />
+    <input type="text" name="teamSize" />
+    <input type="text" name="timeline" />
+    <input type="text" name="budget" />
+    <input type="text" name="challenges" />
+    <input type="text" name="goals" />
+  </form>
+
+  <form name="homepage-consultation" data-netlify="true" method="POST" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="company" />
+    <input type="text" name="projectType" />
+    <input type="text" name="timezone" />
+    <input type="text" name="selectedTimeSlot" />
+  </form>
   <script type="module" src="/src/index.jsx"></script>
 </body>
 
