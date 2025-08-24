@@ -58,14 +58,7 @@ const ConsultationBooking = () => {
   };
 
   const handleSubmit = (e) => {
-    e?.preventDefault();
-    console.log('Consultation booking submitted:', {
-      ...formData,
-      selectedDate,
-      selectedTime,
-      selectedType,
-      selectedTimezone
-    });
+  // Netlify default form submission
   };
 
   return (

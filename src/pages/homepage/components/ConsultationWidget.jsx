@@ -59,9 +59,7 @@ const ConsultationWidget = () => {
   };
 
   const handleSubmit = (e) => {
-    e?.preventDefault();
-    // Handle form submission
-    console.log('Consultation booking:', { ...formData, timeSlot: selectedTimeSlot });
+  // Netlify default form submission
   };
 
   const getAvailabilityStatus = () => {

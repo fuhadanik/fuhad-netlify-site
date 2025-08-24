@@ -119,9 +119,7 @@ const ConsultationSection = () => {
   };
 
   const handleSubmit = (e) => {
-    e?.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission
+  // Netlify default form submission
   };
 
   return (

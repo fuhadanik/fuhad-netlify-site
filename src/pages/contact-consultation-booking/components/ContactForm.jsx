@@ -49,8 +49,7 @@ const ContactForm = () => {
   };
 
   const handleSubmit = (e) => {
-    e?.preventDefault();
-    console.log('Contact form submitted:', formData);
+  // Netlify default form submission
   };
 
   return (
