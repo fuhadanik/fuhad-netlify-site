@@ -9,6 +9,9 @@ import ContactConsultationBooking from './pages/contact-consultation-booking';
 import AboutProfessionalStory from './pages/about-professional-story';
 import MarketingCloudSpecialization from './pages/marketing-cloud-specialization';
 import Homepage from './pages/homepage';
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminRoute from './components/AdminRoute';
 
 const Routes = () => {
   return (
@@ -24,6 +27,8 @@ const Routes = () => {
         <Route path="/about-professional-story" element={<AboutProfessionalStory />} />
         <Route path="/marketing-cloud-specialization" element={<MarketingCloudSpecialization />} />
         <Route path="/homepage" element={<Homepage />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>
